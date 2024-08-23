@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Multiple PDFs</title>
+    <title>Display Multiple JPEGs</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
-            overflow-y: scroll;
         }
-        .pdf-container {
+        .image-container {
             width: 80%;
             margin-bottom: 20px;
-            height: 60vh;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             border-radius: 15px;
             overflow: hidden;
@@ -28,49 +24,51 @@
             border: 2px solid #fda085;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            padding: 10px;
         }
-        .pdf-header {
+        .image-header {
             padding: 10px;
             background-color: #fda085;
             color: #fff;
             text-align: center;
             font-size: 1.2em;
             font-weight: bold;
+            width: 100%;
             border-bottom: 2px solid #f6d365;
         }
-        iframe {
+        img {
             width: 100%;
-            height: calc(100% - 40px);
-            border: none;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="pdf-container">
-        <div class="pdf-header">Contextual Masters Award Certificate 1</div>
-        <iframe src="contextualmasters.pdf"></iframe>
+    <div class="image-container">
+        <div class="image-header">Contextual Masters Award</div>
+        <img src="contextualmasters.jpg" alt="Award Image 1">
     </div>
-    <div class="pdf-container">
-        <div class="pdf-header">Service and Commitment Award Certificate 2</div>
-        <iframe src="service.pdf"></iframe>
+    <div class="image-container">
+        <div class="image-header">Special Initiative Award</div>
+        <img src="specialinitive1.jpg" alt="Award Image 2">
     </div>
-    <div class="pdf-container">
-        <div class="pdf-header">On the Spot Award Certificate 3</div>
-        <iframe src="onthespot1.pdf"></iframe>
+    <div class="image-container">
+        <div class="image-header">Special Initiative Award</div>
+        <img src="specialinitive2.jpg" alt="Award Image 3">
     </div>
-    <div class="pdf-container">
-        <div class="pdf-header">On the Spot Award Certificate 4</div>
-        <iframe src="onthespot2.pdf"></iframe>
+     <div class="image-container">
+        <div class="image-header">Service and Commitment Award</div>
+        <img src="service.jpg" alt="Award Image 3">
     </div>
-    <div class="pdf-container">
-        <div class="pdf-header">Special Initiative Award Certificate 5</div>
-        <iframe src="specialinitiative1.pdf"></iframe>
+    <div class="image-container">
+        <div class="image-header">On the Spot Award</div>
+        <img src="onthespot1.jpg" alt="Award Image 4">
     </div>
-  <div class="pdf-container">
-        <div class="pdf-header">Special Initiative Award Certificate 5</div>
-        <iframe src="specialinitiative2.pdf"></iframe>
-    </div>  
+    <div class="image-container">
+        <div class="image-header">On the Spot Award</div>
+        <img src="onthespot2.jpg" alt="Award Image 5">
+    </div>
 </body>
 </html>
